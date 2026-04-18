@@ -1,0 +1,442 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #111;
+}
+
+nav h2 {
+  color: #00ffff;
+  font-size: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #00ffff;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('../images/bg.jpeg') no-repeat center/cover;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #00ffff;
+  border: none;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background: white;
+  color: black;
+}
+
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* switch text */
+  .desktop-text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: block;
+  }
+
+  .hero-content {
+    max-width: 300px;
+  }
+
+  .hero button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+
+
+/* ABOUT SECTION */
+.about {
+  padding: 80px 20px;
+}
+
+/* CONTAINER (DESKTOP) */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+/* TEXT */
+.about-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.about-text h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-text ul {
+  list-style: none;
+}
+
+/* IMAGE */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 4px solid #00ffff;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* 🔥 IMAGE FIRST */
+  .about-image {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    order: 2;
+  }
+
+  .about-image img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
+/* SERVICES PAGE */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services h1 {
+  margin-bottom: 40px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  max-width: 1100px;
+  margin: auto;
+}
+
+.service-card {
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  width: 250px;
+  transition: 0.3s;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: row;              /* 🔥 keep in one line */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+  /* 🔥 ADD THIS */
+  .services-container {
+    justify-content: center;   /* center cards */
+  }
+
+  .service-card {
+    width: 90%;               /* take full width */
+    max-width: 350px;
+    margin: 0 auto;           /* extra center fix */
+  }
+
+}
+
+
+
+
+
+
+
+ /* CONTACT SECTION */
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact h1 {
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+/* CONTAINER */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+/* BOTH BOXES */
+.contact-info,
+.contact-form {
+  width: 48%;
+  background: #111;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+/* FORM STYLE */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #00ffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background: white;
+  color: black;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* EACH ROW */
+.contact-info .row {
+  display: flex;
+  align-items: center;
+}
+
+/* LABEL FIX WIDTH */
+.contact-info .label {
+  width: 110px;        /* 🔥 this aligns everything */
+  font-weight: bold;
+}
+
+/* LINKS */
+.contact-info a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}
+
+
+
+/* MUSIC PAGE */
+.music {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.music h1 {
+  margin-bottom: 40px;
+}
+
+/* CONTAINER */
+.music-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* CARD */
+.music-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  transition: 0.3s;
+}
+
+.music-card h3 {
+  margin-bottom: 15px;
+}
+
+/* AUDIO */
+.music-card audio {
+  width: 100%;
+}
+
+/* VIDEO */
+.music-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  width: 280px;
+  transition: 0.3s;
+  color: white;
+}
+
+/* HOVER */
+.music-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+.music-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  border: none;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .music-card {
+    width: 90%;
+  }
+}
